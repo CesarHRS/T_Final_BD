@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Doença</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="voltar">← Voltar</a>
+        <h1>Cadastrar Doença</h1>
+
+        <form action="/cadastrar-doenca" method="POST">
+            <label for="nomePopular">Nome Popular da Doença</label>
+            <input type="text" id="nomePopular" name="nomePopular">
+
+            <label for="nomeTecnico">Nome Técnico da Doença</label>
+            <input type="text" id="nomeTecnico" name="nomeTecnico">
+
+            <label for="cid">CID</label>
+            <input type="text" id="cid" name="cid">
+
+            <label for="idPatogeno">ID do Patógeno</label>
+            <input type="text" id="idPatogeno" name="idPatogeno">
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
