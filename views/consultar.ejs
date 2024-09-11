@@ -9,24 +9,14 @@
 <body>
     <div class="container">
         <a href="/" class="voltar">← Voltar</a>
-        <h1>Consultar Doença</h1>
+        <h1>Consulta Específica</h1>
 
-        <p>Você deseja pesquisar uma doença por:</p>      
-            <a href="pesquisarNomePopular.ejs">
-            <button type="button">Nome Popular</button>
-        </a><br>
-
-        <a href="/consultar/nome-tecnico">
-            <button type="button">Nome Técnico</button>
-        </a><br>
-
-        <a href="/consultar/cid">
-            <button type="button">CID</button>
-        </a><br>
-
-        <a href="/consultar/id-patogeno">
-            <button type="button">ID Patógeno</button>
-        </a><br>
+        <p>Você deseja pesquisar uma doença por:</p>
+        
+        <button class="botao" onclick="window.location.href='/searchnpop'">Nome Popular</button>
+        <button class="botao" onclick="window.location.href='/searchntech'">Nome Técnico</button>
+        <button class="botao" onclick="window.location.href='/searchcid'">CID</button>
+        <button class="botao" onclick="window.location.href='/searchpatg'">Patógeno</button>
     </div>
 </body>
 </html>

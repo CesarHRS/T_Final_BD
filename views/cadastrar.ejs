@@ -5,24 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Doença</title>
     <link rel="stylesheet" href="/style.css">
+    <script>
+        function validarFormulario(event) {
+            const nomeTecnico = document.getElementById('nomeTecnico').value.trim();
+            const cid = document.getElementById('cid').value.trim();
+
+            if (!nomeTecnico || !cid) {
+                event.preventDefault(); // Impede o envio do formulário
+                alert('Preencha todos os dados para cadastrar.');
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <a href="/" class="voltar">← Voltar</a>
-        <h1>Cadastrar Doença</h1>
+        <h1>2° passo: Cadastrar Doença</h1>
 
-        <form action="/cadastrar-doenca" method="POST">
-            <label for="nomePopular">Nome Popular da Doença</label>
-            <input type="text" id="nomePopular" name="nomePopular">
+        <form action="/cadastrar-doenca" method="POST" onsubmit="validarFormulario(event)">
+            
+            <input type="hidden" id="idPatog" name="idPatog" value="<%= idPatogeno %>">
+
+            <% if (processo == 1) { %>
+                <p>Patógeno cadastrado: <%= idPatogeno %></p>
+            <% } else if (processo == 2) { %>
+                <p>Patógeno já existente: <%= idPatogeno %></p>
+            <% } %> 
 
             <label for="nomeTecnico">Nome Técnico da Doença</label>
             <input type="text" id="nomeTecnico" name="nomeTecnico">
 
             <label for="cid">CID</label>
             <input type="text" id="cid" name="cid">
-
-            <label for="idPatogeno">ID do Patógeno</label>
-            <input type="text" id="idPatogeno" name="idPatogeno">
 
             <button type="submit">Cadastrar</button>
         </form>
