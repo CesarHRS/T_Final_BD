@@ -134,7 +134,6 @@ Ubuntu 24.04.4 LTS | g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 
 ## 📨 Autores
 
-## Autores
 
 - **Victor Ramos** - [Perfil GitHub](https://github.com/vramoscabral)
 
